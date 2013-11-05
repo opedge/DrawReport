@@ -170,6 +170,7 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 }
 
 - (void)shareButtonClicked:(id)sender {
+    [self.view endEditing:YES];
     [self resetHideBarsTimer];
     UIImage *backgroundImage = self.image;
     
