@@ -23,10 +23,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class DRPDrawView;
+
+@protocol DRPDrawViewDelegate <NSObject>
+
+- (void)didStartDrawingInView:(DRPDrawView *)drawView;
+- (void)didStopDrawingInView:(DRPDrawView *)drawView;
+
+@end
+
 @interface DRPDrawView : UIView
 
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, strong) UIColor *lineColor;
+
+@property (nonatomic, weak) id<DRPDrawViewDelegate> delegate;
 
 - (void)clearDrawing;
 

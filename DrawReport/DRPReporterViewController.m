@@ -25,17 +25,18 @@
 #import "DRPDrawView.h"
 #import "DRPNoteView.h"
 #import "DRPReporter.h"
+#import <UIKit/UIGestureRecognizerSubclass.h>
 
-static NSTimeInterval const HRPReporterViewControllerHideNavigationBarDelay = 2;
+static NSTimeInterval const HRPReporterViewControllerShowBarsDelay = 4;
 
 static CGFloat const HRPReporterViewControllerNoteBottomHeight = 44;
 
 static CGFloat const HRPReporterViewControllerNoteViewWidthPercent = 80;
 static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 
-@interface DRPReporterViewController() {
+@interface DRPReporterViewController() <DRPDrawViewDelegate> {
     UIInterfaceOrientation _initialInterfaceOrientation;
-    NSTimer *_hideBarsTimer;
+    NSTimer *_showBarsTimer;
 }
 
 @property (nonatomic, weak) DRPDrawView *drawView;
@@ -51,8 +52,7 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     [self.view addSubview:imageView];
     _imageView = imageView;
     _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    _imageView.contentMode = UIViewContentModeCenter;
-    
+    _imageView.contentMode = UIViewContentModeCenter;    
     
     CGRect drawRect;
     if (UIInterfaceOrientationIsPortrait(_initialInterfaceOrientation)) {
@@ -62,6 +62,7 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     }
     
     DRPDrawView *drawView = [[DRPDrawView alloc] initWithFrame:drawRect];
+    drawView.delegate = self;
     [self.view addSubview:drawView];
     _drawView = drawView;
     _drawView.contentMode = UIViewContentModeCenter;
@@ -76,15 +77,29 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     _noteView = noteView;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self.view addGestureRecognizer:tap];
+    tap.cancelsTouchesInView = YES;
+    [self.drawView addGestureRecognizer:tap];
     
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (void)handleTap:(UITapGestureRecognizer *)tap {
+    UINavigationController *navigationController = self.navigationController;
+    if (![navigationController isNavigationBarHidden]) {
+        [navigationController setNavigationBarHidden:YES animated:YES];
+        [self hideNoteView];
+    } else {
+        [navigationController setNavigationBarHidden:NO animated:YES];
+        [self showNoteView];
+    }
+    
+    [self resetShowBarsTimer];
+}
+
 - (void)keyboardWillShow:(NSNotification *)notification {
-    [self resetHideBarsTimer];
+    [self resetShowBarsTimer];
     CGRect keyboardRect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGRect rect = [self.view convertRect:keyboardRect fromView:nil];
     CGFloat keyboardHeight = rect.size.height;
@@ -99,10 +114,14 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     [self showNoteView];
 }
 
-- (void)resetHideBarsTimer {
-    if (_hideBarsTimer) {
-        [_hideBarsTimer invalidate];
-        _hideBarsTimer = nil;
+- (void)startShowBarsTimer {
+    _showBarsTimer = [NSTimer scheduledTimerWithTimeInterval:HRPReporterViewControllerShowBarsDelay target:self selector:@selector(showBars) userInfo:nil repeats:NO];
+}
+
+- (void)resetShowBarsTimer {
+    if (_showBarsTimer) {
+        [_showBarsTimer invalidate];
+        _showBarsTimer = nil;
     }
 }
 
@@ -142,7 +161,6 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    _hideBarsTimer = [NSTimer scheduledTimerWithTimeInterval:HRPReporterViewControllerHideNavigationBarDelay target:self selector:@selector(hideNavigationBar) userInfo:nil repeats:NO];
 }
 
 - (void)dealloc {
@@ -156,22 +174,18 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     [_drawView clearDrawing];
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)tap {
+- (void)showBars {
     UINavigationController *navigationController = self.navigationController;
-    if (![navigationController isNavigationBarHidden]) {
-        [navigationController setNavigationBarHidden:YES animated:YES];
-        [self hideNoteView];
-    } else {
+    if ([navigationController isNavigationBarHidden]) {
         [navigationController setNavigationBarHidden:NO animated:YES];
         [self showNoteView];
     }
-    
-    [self resetHideBarsTimer];
 }
 
 - (void)shareButtonClicked:(id)sender {
+    [self resetShowBarsTimer];
+    
     [self.view endEditing:YES];
-    [self resetHideBarsTimer];
     UIImage *backgroundImage = self.image;
     
     UIGraphicsBeginImageContextWithOptions(backgroundImage.size, YES, 0);
@@ -185,13 +199,6 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     UIGraphicsEndImageContext();
     
     [self.delegate reporterViewController:self didFinishDrawingImage:resultImage withNoteText:self.noteView.textView.text];
-}
-
-- (void)hideNavigationBar {
-    if (![self.navigationController isNavigationBarHidden]) {
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
-        [self hideNoteView];
-    }
 }
 
 - (void)hideNoteView {
@@ -286,6 +293,20 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     
     _drawView.transform = transform;
     _drawView.center = self.view.center;
+}
+
+#pragma mark - DRPDrawViewDelegate methods
+- (void)didStartDrawingInView:(DRPDrawView *)drawView {
+    [self resetShowBarsTimer];
+    UINavigationController *navigationController = self.navigationController;
+    if (![navigationController isNavigationBarHidden]) {
+        [navigationController setNavigationBarHidden:YES animated:YES];
+        [self hideNoteView];
+    }
+}
+
+- (void)didStopDrawingInView:(DRPDrawView *)drawView {
+    [self startShowBarsTimer];
 }
 
 @end

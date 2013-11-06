@@ -34,6 +34,7 @@ static NSUInteger const HRPDrawViewMaxCurvesInPath = 100;
     CGPoint _previousPoint;
     UIBezierPath *_drawingPath;
     NSUInteger _currentCurvesCount;
+    BOOL _isTouchesBegan;
 }
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -91,12 +92,20 @@ static NSUInteger const HRPDrawViewMaxCurvesInPath = 100;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    _isTouchesBegan = YES;
     [self flushDrawingPath];
     UITouch *touch = [touches anyObject];
     _previousPoint = [touch locationInView:self];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (_isTouchesBegan) {
+        if (self.delegate) {
+            [self.delegate didStartDrawingInView:self];
+        }
+        _isTouchesBegan = NO;
+    }
+    
     UITouch *touch = [touches anyObject];
     
     _prePreviousPoint = _previousPoint;
@@ -116,7 +125,10 @@ static NSUInteger const HRPDrawViewMaxCurvesInPath = 100;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self cacheCurrentDrawing];
+    [self cacheCurrentDrawing];    
+    if (self.delegate) {
+        [self.delegate didStopDrawingInView:self];
+    }
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
