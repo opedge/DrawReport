@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.public_header_files = 'DrawReport/*.h'
     s.source_files = 'DrawReport/DRPDrawReport.h'
 
-    s.preferred_dependency = 'Core'
+    s.default_subspec = 'Core'
 
     s.subspec 'Core' do |ss|
         ss.public_header_files = 'DrawReport/{DRPReporter,DRPReporterViewController}.h'
