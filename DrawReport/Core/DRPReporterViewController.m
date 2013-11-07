@@ -128,7 +128,9 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#if (defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000)
     self.wantsFullScreenLayout = YES;
+#endif
     
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         [self setAutomaticallyAdjustsScrollViewInsets:NO];

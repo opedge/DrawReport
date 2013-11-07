@@ -97,7 +97,7 @@ static NSString * const DRPBasecampAttachmentNamePrefix = @"Screenshot";
         destinationViewController.authURL = preparedURL;
         destinationViewController.successBlock = success;
         destinationViewController.failureBlock = failure;
-        [sourceViewController presentModalViewController:navVC animated:YES];
+	[sourceViewController presentViewController:navVC animated:YES completion:nil];
     }];
 }
 
