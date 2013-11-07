@@ -161,11 +161,6 @@
 
 - (void)showActivityViewControllerForReporterViewController:(DRPReporterViewController *)reporterViewController withImage:(UIImage *)image noteText:(NSString *)text {
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[ image, text ] applicationActivities:nil];
-    [activityVC setCompletionHandler:^(NSString *activityType, BOOL completed) {
-        if (completed) {
-            [reporterViewController dismissViewControllerAnimated:YES completion:nil];
-        }
-    }];
     [reporterViewController presentViewController:activityVC animated:YES completion:nil];
 }
 
