@@ -71,3 +71,12 @@ pod "DrawReport/Basecamp", "~> 0.1"
   ```
 
 ![Basecamp Configuration Screenshot](https://raw.github.com/opedge/DrawReport/assets/Screenshot_Basecamp_01.png)
+
+## Requirements
+
+  - Supported build target - iOS 7.0 (Xcode 5.0, Apple LLVM compiler 5.0)
+  - Earliest supported deployment target - iOS 6.0
+
+## License
+
+DrawReport is available under the MIT license. See the LICENSE file for more info.
