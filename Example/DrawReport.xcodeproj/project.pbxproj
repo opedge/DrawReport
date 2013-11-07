@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161C62C2182C2ED300F4BD08 /* DRPDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62B9182C2ED300F4BD08 /* DRPDrawView.m */; };
+		161C62C3182C2ED300F4BD08 /* DRPNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62BB182C2ED300F4BD08 /* DRPNoteView.m */; };
+		161C62C4182C2ED300F4BD08 /* DRPReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62BD182C2ED300F4BD08 /* DRPReporter.m */; };
+		161C62C5182C2ED300F4BD08 /* DRPReporterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62BF182C2ED300F4BD08 /* DRPReporterViewController.m */; };
+		161C62C6182C2ED300F4BD08 /* UIWindow+DRPShakeListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62C1182C2ED300F4BD08 /* UIWindow+DRPShakeListener.m */; };
 		167A55DC1815DA5600DCD867 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A55DB1815DA5600DCD867 /* Foundation.framework */; };
 		167A55DE1815DA5600DCD867 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A55DD1815DA5600DCD867 /* CoreGraphics.framework */; };
 		167A55E01815DA5600DCD867 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A55DF1815DA5600DCD867 /* UIKit.framework */; };
-		167A56261815DB7F00DCD867 /* DRPDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A561D1815DB7F00DCD867 /* DRPDrawView.m */; };
-		167A56271815DB7F00DCD867 /* DRPNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A561F1815DB7F00DCD867 /* DRPNoteView.m */; };
-		167A56281815DB7F00DCD867 /* DRPReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56211815DB7F00DCD867 /* DRPReporter.m */; };
-		167A56291815DB7F00DCD867 /* DRPReporterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56231815DB7F00DCD867 /* DRPReporterViewController.m */; };
-		167A562A1815DB7F00DCD867 /* UIWindow+DRPShakeListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56251815DB7F00DCD867 /* UIWindow+DRPShakeListener.m */; };
 		167A56381815DBFC00DCD867 /* DRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56301815DBFC00DCD867 /* DRPAppDelegate.m */; };
 		167A563A1815DBFC00DCD867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167A56341815DBFC00DCD867 /* Images.xcassets */; };
 		167A563B1815DBFC00DCD867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56351815DBFC00DCD867 /* main.m */; };
@@ -22,21 +22,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		161C62B8182C2ED300F4BD08 /* DRPDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDrawView.h; sourceTree = "<group>"; };
+		161C62B9182C2ED300F4BD08 /* DRPDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDrawView.m; sourceTree = "<group>"; };
+		161C62BA182C2ED300F4BD08 /* DRPNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPNoteView.h; sourceTree = "<group>"; };
+		161C62BB182C2ED300F4BD08 /* DRPNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPNoteView.m; sourceTree = "<group>"; };
+		161C62BC182C2ED300F4BD08 /* DRPReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPReporter.h; sourceTree = "<group>"; };
+		161C62BD182C2ED300F4BD08 /* DRPReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPReporter.m; sourceTree = "<group>"; };
+		161C62BE182C2ED300F4BD08 /* DRPReporterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPReporterViewController.h; sourceTree = "<group>"; };
+		161C62BF182C2ED300F4BD08 /* DRPReporterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPReporterViewController.m; sourceTree = "<group>"; };
+		161C62C0182C2ED300F4BD08 /* UIWindow+DRPShakeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DRPShakeListener.h"; sourceTree = "<group>"; };
+		161C62C1182C2ED300F4BD08 /* UIWindow+DRPShakeListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DRPShakeListener.m"; sourceTree = "<group>"; };
+		161C62C7182C2F4B00F4BD08 /* DRPDrawReport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRPDrawReport.h; sourceTree = "<group>"; };
 		167A55D81815DA5600DCD867 /* DrawReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167A55DB1815DA5600DCD867 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		167A55DD1815DA5600DCD867 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		167A55DF1815DA5600DCD867 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		167A55F41815DA5700DCD867 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		167A561C1815DB7F00DCD867 /* DRPDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDrawView.h; sourceTree = "<group>"; };
-		167A561D1815DB7F00DCD867 /* DRPDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDrawView.m; sourceTree = "<group>"; };
-		167A561E1815DB7F00DCD867 /* DRPNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPNoteView.h; sourceTree = "<group>"; };
-		167A561F1815DB7F00DCD867 /* DRPNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPNoteView.m; sourceTree = "<group>"; };
-		167A56201815DB7F00DCD867 /* DRPReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPReporter.h; sourceTree = "<group>"; };
-		167A56211815DB7F00DCD867 /* DRPReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPReporter.m; sourceTree = "<group>"; };
-		167A56221815DB7F00DCD867 /* DRPReporterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPReporterViewController.h; sourceTree = "<group>"; };
-		167A56231815DB7F00DCD867 /* DRPReporterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPReporterViewController.m; sourceTree = "<group>"; };
-		167A56241815DB7F00DCD867 /* UIWindow+DRPShakeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DRPShakeListener.h"; sourceTree = "<group>"; };
-		167A56251815DB7F00DCD867 /* UIWindow+DRPShakeListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DRPShakeListener.m"; sourceTree = "<group>"; };
 		167A562D1815DBFC00DCD867 /* DrawReport-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrawReport-Info.plist"; sourceTree = "<group>"; };
 		167A562E1815DBFC00DCD867 /* DrawReport-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DrawReport-Prefix.pch"; sourceTree = "<group>"; };
 		167A562F1815DBFC00DCD867 /* DRPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPAppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161C62B7182C2ED300F4BD08 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				161C62B8182C2ED300F4BD08 /* DRPDrawView.h */,
+				161C62B9182C2ED300F4BD08 /* DRPDrawView.m */,
+				161C62BA182C2ED300F4BD08 /* DRPNoteView.h */,
+				161C62BB182C2ED300F4BD08 /* DRPNoteView.m */,
+				161C62BC182C2ED300F4BD08 /* DRPReporter.h */,
+				161C62BD182C2ED300F4BD08 /* DRPReporter.m */,
+				161C62BE182C2ED300F4BD08 /* DRPReporterViewController.h */,
+				161C62BF182C2ED300F4BD08 /* DRPReporterViewController.m */,
+				161C62C0182C2ED300F4BD08 /* UIWindow+DRPShakeListener.h */,
+				161C62C1182C2ED300F4BD08 /* UIWindow+DRPShakeListener.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		167A55CF1815DA5600DCD867 = {
 			isa = PBXGroup;
 			children = (
@@ -98,16 +116,8 @@
 		167A561B1815DB7F00DCD867 /* DrawReport */ = {
 			isa = PBXGroup;
 			children = (
-				167A561C1815DB7F00DCD867 /* DRPDrawView.h */,
-				167A561D1815DB7F00DCD867 /* DRPDrawView.m */,
-				167A561E1815DB7F00DCD867 /* DRPNoteView.h */,
-				167A561F1815DB7F00DCD867 /* DRPNoteView.m */,
-				167A56201815DB7F00DCD867 /* DRPReporter.h */,
-				167A56211815DB7F00DCD867 /* DRPReporter.m */,
-				167A56221815DB7F00DCD867 /* DRPReporterViewController.h */,
-				167A56231815DB7F00DCD867 /* DRPReporterViewController.m */,
-				167A56241815DB7F00DCD867 /* UIWindow+DRPShakeListener.h */,
-				167A56251815DB7F00DCD867 /* UIWindow+DRPShakeListener.m */,
+				161C62B7182C2ED300F4BD08 /* Core */,
+				161C62C7182C2F4B00F4BD08 /* DRPDrawReport.h */,
 			);
 			name = DrawReport;
 			path = ../DrawReport;
@@ -176,13 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				167A56261815DB7F00DCD867 /* DRPDrawView.m in Sources */,
+				161C62C4182C2ED300F4BD08 /* DRPReporter.m in Sources */,
+				161C62C2182C2ED300F4BD08 /* DRPDrawView.m in Sources */,
+				161C62C5182C2ED300F4BD08 /* DRPReporterViewController.m in Sources */,
 				167A56381815DBFC00DCD867 /* DRPAppDelegate.m in Sources */,
-				167A562A1815DB7F00DCD867 /* UIWindow+DRPShakeListener.m in Sources */,
-				167A56281815DB7F00DCD867 /* DRPReporter.m in Sources */,
-				167A56291815DB7F00DCD867 /* DRPReporterViewController.m in Sources */,
 				167A563B1815DBFC00DCD867 /* main.m in Sources */,
-				167A56271815DB7F00DCD867 /* DRPNoteView.m in Sources */,
+				161C62C3182C2ED300F4BD08 /* DRPNoteView.m in Sources */,
+				161C62C6182C2ED300F4BD08 /* UIWindow+DRPShakeListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
