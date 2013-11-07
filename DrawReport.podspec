@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.summary  = 'Library for reporting UI bugs.'
     s.homepage = 'https://github.com/opedge/DrawReport'
     s.authors  = { 'Oleg Poyaganov' => 'opedge@gmail.com' }
-    s.source   = { :git => 'https://github.com/opedge/DrawReport.git', :tag => '#{version}' }
+    s.source   = { :git => 'https://github.com/opedge/DrawReport.git', :tag => "#{s.version}" }
     s.requires_arc = true
 
     s.ios.deployment_target = '6.0'
