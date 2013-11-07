@@ -34,6 +34,8 @@ You can stop listening for shake events when you don't want DrawReporter's funct
 
 You can share with standard iOS available sharers (mail, messages, photo stream, copy, etc) in default configuration.
 
+![Report Screenshot](https://raw.github.com/opedge/DrawReport/assets/Screenshot_01.png)
+
 ### Additional Sharers
 
 #### Your own
@@ -67,3 +69,5 @@ pod "DrawReport/Basecamp", "~> 0.1"
   [DRPReporter registerReporterViewControllerDelegate:[DRPBasecamp sharedInstance]];
   [DRPReporter startListeningShake];
   ```
+
+![Basecamp Configuration Screenshot](https://raw.github.com/opedge/DrawReport/assets/Screenshot_Basecamp_01.png)
