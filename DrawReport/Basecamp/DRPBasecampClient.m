@@ -28,6 +28,7 @@
 #import "DRPBasecampTodoList.h"
 #import <NXOAuth2Client/NXOAuth2.h>
 #import "NSError+DRPBasecamp.h"
+#import "NSDictionary+DRPNotNull.h"
 
 static NSString * const DRPBasecampClientGetAuthorizationURLString = @"https://launchpad.37signals.com/authorization.json";
 
@@ -97,15 +98,15 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     DRPBasecampOperation *operation = [[DRPBasecampOperation alloc] initWithRequest:request];
     [operation setCompletion:^(id result, NSError *error) {
         if (![self handleError:error result:result complete:completeBlock]) {
-            NSArray *accountDicts = result[@"accounts"];
+            NSArray *accountDicts = [result drp_objectForKeyNotNull:@"accounts"];
             NSMutableArray *resultArray = [NSMutableArray new];
             for (NSDictionary *accDict in accountDicts) {
-                NSString *product = accDict[@"product"];
+                NSString *product = [accDict drp_objectForKeyNotNull:@"product"];
                 if ([product isEqualToString:@"bcx"]) {
                     DRPBasecampUserAccount *account = [[DRPBasecampUserAccount alloc] init];
-                    account.accountId = accDict[@"id"];
-                    account.name = accDict[@"name"];
-                    account.href = accDict[@"href"];
+                    account.accountId = [accDict drp_objectForKeyNotNull:@"id"];
+                    account.name = [accDict drp_objectForKeyNotNull:@"name"];
+                    account.href = [accDict drp_objectForKeyNotNull:@"href"];
                     [resultArray addObject:account];
                 }
             }
@@ -130,10 +131,10 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
             NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:projectDicts.count];
             for (NSDictionary *projDict in projectDicts) {
                 DRPBasecampProject *project = [[DRPBasecampProject alloc] init];
-                project.projectId = projDict[@"id"];
-                project.name = projDict[@"name"];
-                project.projectDescription = projDict[@"description"];
-                project.url = projDict[@"url"];
+                project.projectId = [projDict drp_objectForKeyNotNull:@"id"];
+                project.name = [projDict drp_objectForKeyNotNull:@"name"];
+                project.projectDescription = [projDict drp_objectForKeyNotNull:@"description"];
+                project.url = [projDict drp_objectForKeyNotNull:@"url"];
                 [resultArray addObject:project];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -157,9 +158,9 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
             NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:todoListsDicts.count];
             for (NSDictionary *tlDict in todoListsDicts) {
                 DRPBasecampTodoList *todoList = [[DRPBasecampTodoList alloc] init];
-                todoList.todoListId = tlDict[@"id"];
-                todoList.name = tlDict[@"name"];
-                todoList.todoListDescription = tlDict[@"description"];
+                todoList.todoListId = [tlDict drp_objectForKeyNotNull:@"id"];
+                todoList.name = [tlDict drp_objectForKeyNotNull:@"name"];
+                todoList.todoListDescription = [tlDict drp_objectForKeyNotNull:@"description"];
                 [resultArray addObject:todoList];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -185,9 +186,9 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
         if (![self handleError:error result:result complete:completeBlock]) {
             NSDictionary *tlDict = result;
             DRPBasecampTodoList *todoList = [[DRPBasecampTodoList alloc] init];
-            todoList.todoListId = tlDict[@"id"];
-            todoList.name = tlDict[@"name"];
-            todoList.todoListDescription = tlDict[@"description"];
+            todoList.todoListId = [tlDict drp_objectForKeyNotNull:@"id"];
+            todoList.name = [tlDict drp_objectForKeyNotNull:@"name"];
+            todoList.todoListDescription = [tlDict drp_objectForKeyNotNull:@"description"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(todoList, nil);
             });
@@ -210,7 +211,7 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     DRPBasecampOperation *operation = [[DRPBasecampOperation alloc] initWithRequest:request];
     [operation setCompletion:^(id result, NSError *error) {
         if (![self handleError:error result:result complete:completeBlock]) {
-            NSString *token = result[@"token"];
+            NSString *token = [result drp_objectForKeyNotNull:@"token"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(token, nil);
             });
@@ -232,7 +233,7 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     DRPBasecampOperation *operation = [[DRPBasecampOperation alloc] initWithRequest:request];
     [operation setCompletion:^(id result, NSError *error) {
         if (![self handleError:error result:result complete:completeBlock]) {
-            NSString *url = result[@"url"];
+            NSString *url = [result drp_objectForKeyNotNull:@"url"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(url, nil);
             });
@@ -257,7 +258,7 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     DRPBasecampOperation *operation = [[DRPBasecampOperation alloc] initWithRequest:request];
     [operation setCompletion:^(id result, NSError *error) {
         if (![self handleError:error result:result complete:completeBlock]) {
-            NSNumber *commentId = result[@"id"];
+            NSNumber *commentId = [result drp_objectForKeyNotNull:@"id"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(commentId, nil);
             });
