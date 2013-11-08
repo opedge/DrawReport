@@ -31,6 +31,7 @@
 #import "DRPBasecampOperation.h"
 #import "NSError+DRPBasecamp.h"
 #import "DRPBasecampAccountsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 static NSString * const DRPBasecampUserAccountKey = @"DRPBasecampUserAccountKey";
 static NSString * const DRPBasecampProjectKey = @"DRPBasecampProjectKey";
@@ -350,6 +351,7 @@ static NSString * const DRPBasecampAttachmentNamePrefix = @"Screenshot";
 - (void)showSuccessPostAlert {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Information", nil) message:NSLocalizedString(@"Your report was posted to Basecamp", nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+    [self.sourceVC dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)postReport {

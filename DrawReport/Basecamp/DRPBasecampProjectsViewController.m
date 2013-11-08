@@ -51,9 +51,9 @@
                 [weakSelf showAlertForNetworkError];
             }
         } else {
+            [weakSelf.refreshControl endRefreshing];
             if (projects.count > 0) {
                 weakSelf.objects = projects;
-                [weakSelf.refreshControl endRefreshing];
                 [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
                 [weakSelf showAlertForNoProjectsError];

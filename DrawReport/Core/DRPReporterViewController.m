@@ -26,6 +26,7 @@
 #import "DRPNoteView.h"
 #import "DRPReporter.h"
 #import <UIKit/UIGestureRecognizerSubclass.h>
+#import <QuartzCore/QuartzCore.h>
 
 static NSTimeInterval const HRPReporterViewControllerShowBarsDelay = 4;
 
@@ -86,16 +87,22 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 }
 
 - (void)handleTap:(UITapGestureRecognizer *)tap {
-    UINavigationController *navigationController = self.navigationController;
-    if (![navigationController isNavigationBarHidden]) {
-        [navigationController setNavigationBarHidden:YES animated:YES];
-        [self hideNoteView];
-    } else {
-        [navigationController setNavigationBarHidden:NO animated:YES];
+    // if noteview is shown - simply hide it to intial state
+    if ([_noteView.textView isFirstResponder]) {
+        [_noteView.textView resignFirstResponder];
         [self showNoteView];
+    } else {
+        UINavigationController *navigationController = self.navigationController;
+        if (![navigationController isNavigationBarHidden]) {
+            [navigationController setNavigationBarHidden:YES animated:YES];
+            [self hideNoteView];
+        } else {
+            [navigationController setNavigationBarHidden:NO animated:YES];
+            [self showNoteView];
+        }
+        
+        [self resetShowBarsTimer];
     }
-    
-    [self resetShowBarsTimer];
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {

@@ -63,9 +63,9 @@
                 [weakSelf showAlertForNetworkError];
             }
         } else {
+            [weakSelf.refreshControl endRefreshing];
             if (todoLists.count > 0) {
-                weakSelf.objects = todoLists;
-                [weakSelf.refreshControl endRefreshing];
+                weakSelf.objects = todoLists;                
                 [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
                 [weakSelf showAlertForNoTodoListsError];

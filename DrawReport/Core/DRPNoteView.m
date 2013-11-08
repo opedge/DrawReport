@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import "DRPNoteView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation DRPNoteView
 

@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import "DRPDrawView.h"
+#import <QuartzCore/QuartzCore.h>
 
 static CGFloat const HRPDrawViewDefaultLineWidth = 3.0;
 static NSUInteger const HRPDrawViewMaxCurvesInPath = 100;

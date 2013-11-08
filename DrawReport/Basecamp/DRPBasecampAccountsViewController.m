@@ -70,9 +70,9 @@ static NSString * const DRPBasecampAccountCellId = @"DRPBasecampAccountCellId";
                 [weakSelf showAlertForNetworkError];
             }
         } else {
+            [weakSelf.refreshControl endRefreshing];
             if (accounts.count > 0) {
                 weakSelf.objects = accounts;
-                [weakSelf.refreshControl endRefreshing];
                 [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
                 [weakSelf showAlertForNoAccountsError];
