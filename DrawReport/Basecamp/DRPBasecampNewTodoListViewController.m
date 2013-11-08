@@ -54,10 +54,12 @@ static CGFloat const DRPBasecampNewTodoListFormTopMargin = 15;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.extendedLayoutIncludesOpaqueBars = NO;
     }
+#endif
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
@@ -79,13 +81,16 @@ static CGFloat const DRPBasecampNewTodoListFormTopMargin = 15;
     UITableViewCell *nameCell = [[UITableViewCell alloc] init];
     nameCell.selectionStyle = UITableViewCellSelectionStyleNone;
     CGFloat leftIndent = nameCell.indentationWidth;
-    CGFloat width;
+    
+    CGFloat width = nameCell.contentView.frame.size.width - 20;
+    
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
     if ([self.tableView respondsToSelector:@selector(separatorInset)]) {
         leftIndent = self.tableView.separatorInset.left;
         width = nameCell.contentView.frame.size.width;
-    } else {
-        width = nameCell.contentView.frame.size.width - 20;
     }
+#endif
+    
     UITextField *nameField = [[UITextField alloc] initWithFrame:CGRectMake(leftIndent, 0, width - leftIndent, self.tableView.rowHeight)];
     nameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     nameField.placeholder = NSLocalizedString(@"List name", nil);

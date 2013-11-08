@@ -142,11 +142,16 @@
             CGContextRotateCTM(context, M_PI);
             CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
         }
+        
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
         if ([window respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
             [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
         } else {
             [window.layer renderInContext:context];
         }
+#else
+        [window.layer renderInContext:context];
+#endif
         CGContextRestoreGState(context);
     }
     

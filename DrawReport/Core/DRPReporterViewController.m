@@ -139,9 +139,11 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     self.wantsFullScreenLayout = YES;
 #endif
     
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         [self setAutomaticallyAdjustsScrollViewInsets:NO];
     }
+#endif
     
     self.navigationController.navigationBar.translucent = YES;
     self.navigationItem.title = @"Report";
@@ -199,11 +201,17 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     
     UIGraphicsBeginImageContextWithOptions(backgroundImage.size, YES, 0);
     [backgroundImage drawAtPoint:CGPointZero];
+    
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
     if ([self.drawView respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
         [self.drawView drawViewHierarchyInRect:(CGRect){ CGPointZero, backgroundImage.size } afterScreenUpdates:NO];
     } else {
         [self.drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
     }
+#else
+    [self.drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
+#endif
+    
     UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
