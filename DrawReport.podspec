@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
     s.platform = :ios
     s.version  = '0.1'
     s.license  = 'MIT'
-    s.summary  = 'Library for reporting UI bugs.'
+    s.summary  = 'Report UI issues by shaking your device to draw and annotate them.'
     s.homepage = 'https://github.com/opedge/DrawReport'
     s.authors  = { 'Oleg Poyaganov' => 'opedge@gmail.com' }
     s.source   = { :git => 'https://github.com/opedge/DrawReport.git', :tag => "#{s.version}" }
