@@ -1,2 +1,5 @@
 language: objective-c
-script: pod spec lint
+before_install:
+    - brew update
+    - brew uninstall xctool && brew install xctool --HEAD
+script: xctool -project Example/DrawReport.xcodeproj -scheme DrawReport test
