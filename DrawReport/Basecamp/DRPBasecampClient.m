@@ -207,7 +207,7 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     NSData *bodyData = UIImagePNGRepresentation(image);
     [request setHTTPBody:bodyData];
     [request setValue:@"image/png" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", bodyData.length] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)bodyData.length] forHTTPHeaderField:@"Content-Length"];
     DRPBasecampOperation *operation = [[DRPBasecampOperation alloc] initWithRequest:request];
     [operation setCompletion:^(id result, NSError *error) {
         if (![self handleError:error result:result complete:completeBlock]) {
@@ -276,7 +276,7 @@ static NSString * const DRPBasecampClientCommentsPath = @"comments.json";
     NSString *queryString = [NSString stringWithFormat:@"type=refresh&client_id=%@&client_secret=%@&refresh_token=%@", clientId, clientSecret, accessToken.refreshToken];
     NSData *bodyData = [queryString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *contentType = @"application/x-www-form-urlencoded";
-    NSString *contentLength = [NSString stringWithFormat:@"%d", [bodyData length]];
+    NSString *contentLength = [NSString stringWithFormat:@"%lu", (unsigned long)bodyData.length];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:tokenURL];
     [request setHTTPMethod:@"POST"];
     [request setValue:contentType forHTTPHeaderField:@"Content-Type"];

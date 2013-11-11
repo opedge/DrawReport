@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16EB194D1831805B00C297DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB194C1831805B00C297DC /* Foundation.framework */; };
+		16EB194F1831805B00C297DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB194E1831805B00C297DC /* CoreGraphics.framework */; };
+		16EB19511831805B00C297DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB19501831805B00C297DC /* UIKit.framework */; };
+		16EB196C1831805B00C297DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB196B1831805B00C297DC /* XCTest.framework */; };
+		16EB196D1831805B00C297DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB194C1831805B00C297DC /* Foundation.framework */; };
+		16EB196E1831805B00C297DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB19501831805B00C297DC /* UIKit.framework */; };
+		16EB198B183180CE00C297DC /* DRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB1984183180CE00C297DC /* DRPAppDelegate.m */; };
+		16EB198D183180CE00C297DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EB1987183180CE00C297DC /* Images.xcassets */; };
+		16EB198E183180CE00C297DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB1988183180CE00C297DC /* main.m */; };
+		16EB198F183180CE00C297DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB1989183180CE00C297DC /* Main.storyboard */; };
+		16EB19AD1831810800C297DC /* DRPBasecamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19921831810800C297DC /* DRPBasecamp.m */; };
+		16EB19AE1831810800C297DC /* DRPBasecampAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19941831810800C297DC /* DRPBasecampAccountsViewController.m */; };
+		16EB19AF1831810800C297DC /* DRPBasecampAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19961831810800C297DC /* DRPBasecampAuthViewController.m */; };
+		16EB19B01831810800C297DC /* DRPBasecampBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19981831810800C297DC /* DRPBasecampBaseViewController.m */; };
+		16EB19B11831810800C297DC /* DRPBasecampClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB199A1831810800C297DC /* DRPBasecampClient.m */; };
+		16EB19B21831810800C297DC /* DRPBasecampNewTodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB199C1831810800C297DC /* DRPBasecampNewTodoListViewController.m */; };
+		16EB19B31831810800C297DC /* DRPBasecampOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB199E1831810800C297DC /* DRPBasecampOperation.m */; };
+		16EB19B41831810800C297DC /* DRPBasecampProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19A01831810800C297DC /* DRPBasecampProject.m */; };
+		16EB19B51831810800C297DC /* DRPBasecampProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19A21831810800C297DC /* DRPBasecampProjectsViewController.m */; };
+		16EB19B61831810800C297DC /* DRPBasecampTodoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19A41831810800C297DC /* DRPBasecampTodoList.m */; };
+		16EB19B71831810800C297DC /* DRPBasecampTodoListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19A61831810800C297DC /* DRPBasecampTodoListsViewController.m */; };
+		16EB19B81831810800C297DC /* DRPBasecampUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19A81831810800C297DC /* DRPBasecampUserAccount.m */; };
+		16EB19B91831810800C297DC /* NSDictionary+DRPNotNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19AA1831810800C297DC /* NSDictionary+DRPNotNull.m */; };
+		16EB19BA1831810800C297DC /* NSError+DRPBasecamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19AC1831810800C297DC /* NSError+DRPBasecamp.m */; };
+		636F969D68B14FB38C919D46 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F00A98345949F0B5A42536 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16EB196F1831805B00C297DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16EB19411831805B00C297DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16EB19481831805B00C297DC;
+			remoteInfo = DrawReportBasecamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		072941235FA84B4D8DAE377B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		12F00A98345949F0B5A42536 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB19491831805B00C297DC /* DrawReportBasecamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawReportBasecamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB194C1831805B00C297DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16EB194E1831805B00C297DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16EB19501831805B00C297DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16EB196A1831805B00C297DC /* DrawReportBasecampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawReportBasecampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB196B1831805B00C297DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		16EB1981183180CE00C297DC /* DrawReportBasecamp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrawReportBasecamp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		16EB1982183180CE00C297DC /* DrawReportBasecamp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DrawReportBasecamp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		16EB1983183180CE00C297DC /* DRPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		16EB1984183180CE00C297DC /* DRPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		16EB1987183180CE00C297DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		16EB1988183180CE00C297DC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		16EB1989183180CE00C297DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
+		16EB19911831810800C297DC /* DRPBasecamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecamp.h; sourceTree = "<group>"; };
+		16EB19921831810800C297DC /* DRPBasecamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecamp.m; sourceTree = "<group>"; };
+		16EB19931831810800C297DC /* DRPBasecampAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampAccountsViewController.h; sourceTree = "<group>"; };
+		16EB19941831810800C297DC /* DRPBasecampAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampAccountsViewController.m; sourceTree = "<group>"; };
+		16EB19951831810800C297DC /* DRPBasecampAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampAuthViewController.h; sourceTree = "<group>"; };
+		16EB19961831810800C297DC /* DRPBasecampAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampAuthViewController.m; sourceTree = "<group>"; };
+		16EB19971831810800C297DC /* DRPBasecampBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampBaseViewController.h; sourceTree = "<group>"; };
+		16EB19981831810800C297DC /* DRPBasecampBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampBaseViewController.m; sourceTree = "<group>"; };
+		16EB19991831810800C297DC /* DRPBasecampClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampClient.h; sourceTree = "<group>"; };
+		16EB199A1831810800C297DC /* DRPBasecampClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampClient.m; sourceTree = "<group>"; };
+		16EB199B1831810800C297DC /* DRPBasecampNewTodoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampNewTodoListViewController.h; sourceTree = "<group>"; };
+		16EB199C1831810800C297DC /* DRPBasecampNewTodoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampNewTodoListViewController.m; sourceTree = "<group>"; };
+		16EB199D1831810800C297DC /* DRPBasecampOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampOperation.h; sourceTree = "<group>"; };
+		16EB199E1831810800C297DC /* DRPBasecampOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampOperation.m; sourceTree = "<group>"; };
+		16EB199F1831810800C297DC /* DRPBasecampProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampProject.h; sourceTree = "<group>"; };
+		16EB19A01831810800C297DC /* DRPBasecampProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampProject.m; sourceTree = "<group>"; };
+		16EB19A11831810800C297DC /* DRPBasecampProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampProjectsViewController.h; sourceTree = "<group>"; };
+		16EB19A21831810800C297DC /* DRPBasecampProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampProjectsViewController.m; sourceTree = "<group>"; };
+		16EB19A31831810800C297DC /* DRPBasecampTodoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampTodoList.h; sourceTree = "<group>"; };
+		16EB19A41831810800C297DC /* DRPBasecampTodoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampTodoList.m; sourceTree = "<group>"; };
+		16EB19A51831810800C297DC /* DRPBasecampTodoListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampTodoListsViewController.h; sourceTree = "<group>"; };
+		16EB19A61831810800C297DC /* DRPBasecampTodoListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampTodoListsViewController.m; sourceTree = "<group>"; };
+		16EB19A71831810800C297DC /* DRPBasecampUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecampUserAccount.h; sourceTree = "<group>"; };
+		16EB19A81831810800C297DC /* DRPBasecampUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPBasecampUserAccount.m; sourceTree = "<group>"; };
+		16EB19A91831810800C297DC /* NSDictionary+DRPNotNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DRPNotNull.h"; sourceTree = "<group>"; };
+		16EB19AA1831810800C297DC /* NSDictionary+DRPNotNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DRPNotNull.m"; sourceTree = "<group>"; };
+		16EB19AB1831810800C297DC /* NSError+DRPBasecamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DRPBasecamp.h"; sourceTree = "<group>"; };
+		16EB19AC1831810800C297DC /* NSError+DRPBasecamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DRPBasecamp.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16EB19461831805B00C297DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB194F1831805B00C297DC /* CoreGraphics.framework in Frameworks */,
+				16EB19511831805B00C297DC /* UIKit.framework in Frameworks */,
+				16EB194D1831805B00C297DC /* Foundation.framework in Frameworks */,
+				636F969D68B14FB38C919D46 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB19671831805B00C297DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB196C1831805B00C297DC /* XCTest.framework in Frameworks */,
+				16EB196E1831805B00C297DC /* UIKit.framework in Frameworks */,
+				16EB196D1831805B00C297DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16EB19401831805B00C297DC = {
+			isa = PBXGroup;
+			children = (
+				16EB19901831810800C297DC /* Basecamp */,
+				16EB19521831805B00C297DC /* DrawReportBasecamp */,
+				16EB194B1831805B00C297DC /* Frameworks */,
+				16EB194A1831805B00C297DC /* Products */,
+				072941235FA84B4D8DAE377B /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		16EB194A1831805B00C297DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16EB19491831805B00C297DC /* DrawReportBasecamp.app */,
+				16EB196A1831805B00C297DC /* DrawReportBasecampTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16EB194B1831805B00C297DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16EB194C1831805B00C297DC /* Foundation.framework */,
+				16EB194E1831805B00C297DC /* CoreGraphics.framework */,
+				16EB19501831805B00C297DC /* UIKit.framework */,
+				16EB196B1831805B00C297DC /* XCTest.framework */,
+				12F00A98345949F0B5A42536 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16EB19521831805B00C297DC /* DrawReportBasecamp */ = {
+			isa = PBXGroup;
+			children = (
+				16EB1981183180CE00C297DC /* DrawReportBasecamp-Info.plist */,
+				16EB1982183180CE00C297DC /* DrawReportBasecamp-Prefix.pch */,
+				16EB1983183180CE00C297DC /* DRPAppDelegate.h */,
+				16EB1984183180CE00C297DC /* DRPAppDelegate.m */,
+				16EB1987183180CE00C297DC /* Images.xcassets */,
+				16EB1988183180CE00C297DC /* main.m */,
+				16EB1989183180CE00C297DC /* Main.storyboard */,
+			);
+			path = DrawReportBasecamp;
+			sourceTree = "<group>";
+		};
+		16EB19901831810800C297DC /* Basecamp */ = {
+			isa = PBXGroup;
+			children = (
+				16EB19911831810800C297DC /* DRPBasecamp.h */,
+				16EB19921831810800C297DC /* DRPBasecamp.m */,
+				16EB19931831810800C297DC /* DRPBasecampAccountsViewController.h */,
+				16EB19941831810800C297DC /* DRPBasecampAccountsViewController.m */,
+				16EB19951831810800C297DC /* DRPBasecampAuthViewController.h */,
+				16EB19961831810800C297DC /* DRPBasecampAuthViewController.m */,
+				16EB19971831810800C297DC /* DRPBasecampBaseViewController.h */,
+				16EB19981831810800C297DC /* DRPBasecampBaseViewController.m */,
+				16EB19991831810800C297DC /* DRPBasecampClient.h */,
+				16EB199A1831810800C297DC /* DRPBasecampClient.m */,
+				16EB199B1831810800C297DC /* DRPBasecampNewTodoListViewController.h */,
+				16EB199C1831810800C297DC /* DRPBasecampNewTodoListViewController.m */,
+				16EB199D1831810800C297DC /* DRPBasecampOperation.h */,
+				16EB199E1831810800C297DC /* DRPBasecampOperation.m */,
+				16EB199F1831810800C297DC /* DRPBasecampProject.h */,
+				16EB19A01831810800C297DC /* DRPBasecampProject.m */,
+				16EB19A11831810800C297DC /* DRPBasecampProjectsViewController.h */,
+				16EB19A21831810800C297DC /* DRPBasecampProjectsViewController.m */,
+				16EB19A31831810800C297DC /* DRPBasecampTodoList.h */,
+				16EB19A41831810800C297DC /* DRPBasecampTodoList.m */,
+				16EB19A51831810800C297DC /* DRPBasecampTodoListsViewController.h */,
+				16EB19A61831810800C297DC /* DRPBasecampTodoListsViewController.m */,
+				16EB19A71831810800C297DC /* DRPBasecampUserAccount.h */,
+				16EB19A81831810800C297DC /* DRPBasecampUserAccount.m */,
+				16EB19A91831810800C297DC /* NSDictionary+DRPNotNull.h */,
+				16EB19AA1831810800C297DC /* NSDictionary+DRPNotNull.m */,
+				16EB19AB1831810800C297DC /* NSError+DRPBasecamp.h */,
+				16EB19AC1831810800C297DC /* NSError+DRPBasecamp.m */,
+			);
+			name = Basecamp;
+			path = ../DrawReport/Basecamp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16EB19481831805B00C297DC /* DrawReportBasecamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EB197B1831805B00C297DC /* Build configuration list for PBXNativeTarget "DrawReportBasecamp" */;
+			buildPhases = (
+				1CE4E933AC2B465AAE5BE7AE /* Check Pods Manifest.lock */,
+				16EB19451831805B00C297DC /* Sources */,
+				16EB19461831805B00C297DC /* Frameworks */,
+				16EB19471831805B00C297DC /* Resources */,
+				141B429342FF4B20816B8349 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawReportBasecamp;
+			productName = DrawReportBasecamp;
+			productReference = 16EB19491831805B00C297DC /* DrawReportBasecamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16EB19691831805B00C297DC /* DrawReportBasecampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EB197E1831805B00C297DC /* Build configuration list for PBXNativeTarget "DrawReportBasecampTests" */;
+			buildPhases = (
+				16EB19661831805B00C297DC /* Sources */,
+				16EB19671831805B00C297DC /* Frameworks */,
+				16EB19681831805B00C297DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16EB19701831805B00C297DC /* PBXTargetDependency */,
+			);
+			name = DrawReportBasecampTests;
+			productName = DrawReportBasecampTests;
+			productReference = 16EB196A1831805B00C297DC /* DrawReportBasecampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16EB19411831805B00C297DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DRP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Oleg Poyaganov";
+				TargetAttributes = {
+					16EB19691831805B00C297DC = {
+						TestTargetID = 16EB19481831805B00C297DC;
+					};
+				};
+			};
+			buildConfigurationList = 16EB19441831805B00C297DC /* Build configuration list for PBXProject "DrawReportBasecamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16EB19401831805B00C297DC;
+			productRefGroup = 16EB194A1831805B00C297DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16EB19481831805B00C297DC /* DrawReportBasecamp */,
+				16EB19691831805B00C297DC /* DrawReportBasecampTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16EB19471831805B00C297DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB198F183180CE00C297DC /* Main.storyboard in Resources */,
+				16EB198D183180CE00C297DC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB19681831805B00C297DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		141B429342FF4B20816B8349 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CE4E933AC2B465AAE5BE7AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16EB19451831805B00C297DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB19AE1831810800C297DC /* DRPBasecampAccountsViewController.m in Sources */,
+				16EB19B21831810800C297DC /* DRPBasecampNewTodoListViewController.m in Sources */,
+				16EB19B41831810800C297DC /* DRPBasecampProject.m in Sources */,
+				16EB19B81831810800C297DC /* DRPBasecampUserAccount.m in Sources */,
+				16EB19AF1831810800C297DC /* DRPBasecampAuthViewController.m in Sources */,
+				16EB19BA1831810800C297DC /* NSError+DRPBasecamp.m in Sources */,
+				16EB198B183180CE00C297DC /* DRPAppDelegate.m in Sources */,
+				16EB19B51831810800C297DC /* DRPBasecampProjectsViewController.m in Sources */,
+				16EB198E183180CE00C297DC /* main.m in Sources */,
+				16EB19B91831810800C297DC /* NSDictionary+DRPNotNull.m in Sources */,
+				16EB19B61831810800C297DC /* DRPBasecampTodoList.m in Sources */,
+				16EB19AD1831810800C297DC /* DRPBasecamp.m in Sources */,
+				16EB19B31831810800C297DC /* DRPBasecampOperation.m in Sources */,
+				16EB19B01831810800C297DC /* DRPBasecampBaseViewController.m in Sources */,
+				16EB19B11831810800C297DC /* DRPBasecampClient.m in Sources */,
+				16EB19B71831810800C297DC /* DRPBasecampTodoListsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB19661831805B00C297DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16EB19701831805B00C297DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16EB19481831805B00C297DC /* DrawReportBasecamp */;
+			targetProxy = 16EB196F1831805B00C297DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16EB19791831805B00C297DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		16EB197A1831805B00C297DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16EB197C1831805B00C297DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 072941235FA84B4D8DAE377B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawReportBasecamp-Prefix.pch";
+				INFOPLIST_FILE = "DrawReportBasecamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		16EB197D1831805B00C297DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 072941235FA84B4D8DAE377B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawReportBasecamp-Prefix.pch";
+				INFOPLIST_FILE = "DrawReportBasecamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		16EB197F1831805B00C297DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawReportBasecamp.app/DrawReportBasecamp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawReportBasecamp/DrawReportBasecamp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DrawReportBasecampTests/DrawReportBasecampTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		16EB19801831805B00C297DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawReportBasecamp.app/DrawReportBasecamp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawReportBasecamp/DrawReportBasecamp-Prefix.pch";
+				INFOPLIST_FILE = "DrawReportBasecampTests/DrawReportBasecampTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16EB19441831805B00C297DC /* Build configuration list for PBXProject "DrawReportBasecamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB19791831805B00C297DC /* Debug */,
+				16EB197A1831805B00C297DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EB197B1831805B00C297DC /* Build configuration list for PBXNativeTarget "DrawReportBasecamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB197C1831805B00C297DC /* Debug */,
+				16EB197D1831805B00C297DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EB197E1831805B00C297DC /* Build configuration list for PBXNativeTarget "DrawReportBasecampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB197F1831805B00C297DC /* Debug */,
+				16EB19801831805B00C297DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16EB19411831805B00C297DC /* Project object */;
+}

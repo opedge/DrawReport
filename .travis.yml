@@ -2,6 +2,8 @@ language: objective-c
 before_install:
     - brew update
     - brew install xctool
+install: cd ExampleBasecamp; pod install; cd ..
 script:
     - pod spec lint 
-    - xctool -project Example/DrawReport.xcodeproj -target DrawReport -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - xctool -project Example/DrawReport.xcodeproj -scheme DrawReport -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - xctool -workspace ExampleBasecamp/DrawReportBasecamp.xcworkspace -scheme DrawReportBasecamp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

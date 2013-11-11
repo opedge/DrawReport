@@ -1,0 +1,4 @@
+platform :ios, '6.0'
+
+pod 'DrawReport/Core', :git => 'https://github.com/opedge/DrawReport.git'
+pod 'NXOAuth2Client', '~> 1.2.4'
