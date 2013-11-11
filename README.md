@@ -5,6 +5,8 @@ DrawReport
 
 Report UI issues by shaking your device to draw and annotate them.
 
+This library is for app's testing/beta stage only. Check it before release your app.
+
 Sometimes your meticulous user finds a bug in your iOS app's awesome and magnificent UI but does not know how to report it. Now it's easy to do with DrawReport - a small library for iOS app development process. Simply integrate it, shake your device and try to draw something!
 
 ## How To Get Started
