@@ -1,5 +1,7 @@
 language: objective-c
 before_install:
     - brew update
-    - brew uninstall xctool && brew install xctool --HEAD
-script: xctool -project Example/DrawReport.xcodeproj -scheme DrawReport test
+    - brew install xctool
+script:
+    - pod spec lint 
+    - xctool -project Example/DrawReport.xcodeproj -target DrawReport -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
