@@ -16,7 +16,6 @@
 		167A55DE1815DA5600DCD867 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A55DD1815DA5600DCD867 /* CoreGraphics.framework */; };
 		167A55E01815DA5600DCD867 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A55DF1815DA5600DCD867 /* UIKit.framework */; };
 		167A56381815DBFC00DCD867 /* DRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56301815DBFC00DCD867 /* DRPAppDelegate.m */; };
-		167A563A1815DBFC00DCD867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167A56341815DBFC00DCD867 /* Images.xcassets */; };
 		167A563B1815DBFC00DCD867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A56351815DBFC00DCD867 /* main.m */; };
 		167A563C1815DBFC00DCD867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167A56361815DBFC00DCD867 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		167A562E1815DBFC00DCD867 /* DrawReport-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DrawReport-Prefix.pch"; sourceTree = "<group>"; };
 		167A562F1815DBFC00DCD867 /* DRPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPAppDelegate.h; sourceTree = "<group>"; };
 		167A56301815DBFC00DCD867 /* DRPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPAppDelegate.m; sourceTree = "<group>"; };
-		167A56341815DBFC00DCD867 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		167A56351815DBFC00DCD867 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		167A56361815DBFC00DCD867 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +83,6 @@
 				167A562E1815DBFC00DCD867 /* DrawReport-Prefix.pch */,
 				167A562F1815DBFC00DCD867 /* DRPAppDelegate.h */,
 				167A56301815DBFC00DCD867 /* DRPAppDelegate.m */,
-				167A56341815DBFC00DCD867 /* Images.xcassets */,
 				167A56351815DBFC00DCD867 /* main.m */,
 				167A56361815DBFC00DCD867 /* Main.storyboard */,
 				167A561B1815DB7F00DCD867 /* DrawReport */,
@@ -174,7 +171,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				167A563A1815DBFC00DCD867 /* Images.xcassets in Resources */,
 				167A563C1815DBFC00DCD867 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +275,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawReport-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DrawReport-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,6 +290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawReport-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DrawReport-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

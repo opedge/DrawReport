@@ -14,7 +14,6 @@
 		16EB196D1831805B00C297DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB194C1831805B00C297DC /* Foundation.framework */; };
 		16EB196E1831805B00C297DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB19501831805B00C297DC /* UIKit.framework */; };
 		16EB198B183180CE00C297DC /* DRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB1984183180CE00C297DC /* DRPAppDelegate.m */; };
-		16EB198D183180CE00C297DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EB1987183180CE00C297DC /* Images.xcassets */; };
 		16EB198E183180CE00C297DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB1988183180CE00C297DC /* main.m */; };
 		16EB198F183180CE00C297DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB1989183180CE00C297DC /* Main.storyboard */; };
 		16EB19AD1831810800C297DC /* DRPBasecamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB19921831810800C297DC /* DRPBasecamp.m */; };
@@ -57,7 +56,6 @@
 		16EB1982183180CE00C297DC /* DrawReportBasecamp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DrawReportBasecamp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		16EB1983183180CE00C297DC /* DRPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		16EB1984183180CE00C297DC /* DRPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		16EB1987183180CE00C297DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		16EB1988183180CE00C297DC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		16EB1989183180CE00C297DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
 		16EB19911831810800C297DC /* DRPBasecamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPBasecamp.h; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				16EB1982183180CE00C297DC /* DrawReportBasecamp-Prefix.pch */,
 				16EB1983183180CE00C297DC /* DRPAppDelegate.h */,
 				16EB1984183180CE00C297DC /* DRPAppDelegate.m */,
-				16EB1987183180CE00C297DC /* Images.xcassets */,
 				16EB1988183180CE00C297DC /* main.m */,
 				16EB1989183180CE00C297DC /* Main.storyboard */,
 			);
@@ -277,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EB198F183180CE00C297DC /* Main.storyboard in Resources */,
-				16EB198D183180CE00C297DC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -431,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -441,11 +437,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 072941235FA84B4D8DAE377B /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawReportBasecamp-Prefix.pch";
 				INFOPLIST_FILE = "DrawReportBasecamp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,11 +454,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 072941235FA84B4D8DAE377B /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawReportBasecamp-Prefix.pch";
 				INFOPLIST_FILE = "DrawReportBasecamp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
