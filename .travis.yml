@@ -2,6 +2,7 @@ language: objective-c
 before_install:
     - brew update
     - brew uninstall xctool && brew install xctool
+    - bundle install
 install: cd ExampleBasecamp; pod install; cd ..
 script:
     - pod spec lint 
