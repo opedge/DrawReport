@@ -1,7 +1,7 @@
 DrawReport
 ==========
 
-[![endorse](https://api.coderwall.com/opedge/endorsecount.png)](https://coderwall.com/opedge) [![Build Status](https://travis-ci.org/opedge/DrawReport.png?branch=master)](https://travis-ci.org/opedge/DrawReport)
+[![endorse](https://api.coderwall.com/opedge/endorsecount.png)](https://coderwall.com/opedge)
 
 Report UI issues by shaking your device to draw and annotate them.
 
