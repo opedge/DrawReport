@@ -19,7 +19,7 @@ To add DrawReport to your project it is necessary that the following lines are i
 
 ```ruby
 platform :ios, '7.0'
-pod "DrawReport", "~> 0.1"
+pod "DrawReport", "~> 0.2"
 ```
 
 ### Usage
