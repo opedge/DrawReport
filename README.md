@@ -1,7 +1,7 @@
 DrawReport
 ==========
 
-[![endorse](https://api.coderwall.com/opedge/endorsecount.png)](https://coderwall.com/opedge)
+[![Build Status](https://travis-ci.org/opedge/DrawReport.svg?branch=master)](https://travis-ci.org/opedge/DrawReport)
 
 Report UI issues by shaking your device to draw and annotate them.
 
@@ -57,7 +57,7 @@ If you want to share your code, I'm open for merge requests!
 [Basecamp](https://basecamp.com) sharer which posts report as Todo to specified Todo list is already implemented and shipped out of the box. You need to specify Basecamp sharer dependency line in your Podfile instead of "DrawReport":
 
 ```ruby
-pod "DrawReport/Basecamp", "~> 0.1"
+pod "DrawReport/Basecamp", "~> 0.2"
 ```
 
 ##### Basecamp configuration
@@ -78,7 +78,7 @@ pod "DrawReport/Basecamp", "~> 0.1"
 
 ## Requirements
 
-  - Supported build target - iOS 7.0 (Xcode 5.0, Apple LLVM compiler 5.0)
+  - Supported build target - iOS 8.1 (Xcode 6.1)
   - Earliest supported deployment target - iOS 6.0
 
 ## License
