@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1609AE431AA0ED4800FC4495 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1609AE421AA0ED4800FC4495 /* Images.xcassets */; };
 		161C62C2182C2ED300F4BD08 /* DRPDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62B9182C2ED300F4BD08 /* DRPDrawView.m */; };
 		161C62C3182C2ED300F4BD08 /* DRPNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62BB182C2ED300F4BD08 /* DRPNoteView.m */; };
 		161C62C4182C2ED300F4BD08 /* DRPReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C62BD182C2ED300F4BD08 /* DRPReporter.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1609AE421AA0ED4800FC4495 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DrawReport/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		161C62B8182C2ED300F4BD08 /* DRPDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDrawView.h; sourceTree = "<group>"; };
 		161C62B9182C2ED300F4BD08 /* DRPDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDrawView.m; sourceTree = "<group>"; };
 		161C62BA182C2ED300F4BD08 /* DRPNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPNoteView.h; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				161C62B7182C2ED300F4BD08 /* Core */,
 				161C62C7182C2F4B00F4BD08 /* DRPDrawReport.h */,
+				1609AE421AA0ED4800FC4495 /* Images.xcassets */,
 			);
 			name = DrawReport;
 			path = ../DrawReport;
@@ -147,7 +150,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DRP;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = 167A55D31815DA5600DCD867 /* Build configuration list for PBXProject "DrawReport" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167A563C1815DBFC00DCD867 /* Main.storyboard in Resources */,
+				1609AE431AA0ED4800FC4495 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +203,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -238,7 +241,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

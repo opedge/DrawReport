@@ -273,7 +273,8 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
             
         case UIInterfaceOrientationLandscapeRight:
             return -M_PI_2;
-            
+        
+        case UIDeviceOrientationUnknown:
         case UIInterfaceOrientationPortrait:
             return 0;
             
@@ -288,6 +289,7 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     
     CGAffineTransform transform;
     switch (toInterfaceOrientation) {
+        case UIDeviceOrientationUnknown:
         case UIInterfaceOrientationPortrait:
             transform = CGAffineTransformMakeRotation(-angle);
             break;
