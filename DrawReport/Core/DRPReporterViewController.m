@@ -170,10 +170,6 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
 - (void)dealloc {
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter removeObserver:self name:DRPReporterShakeNotification object:nil];
@@ -284,7 +280,6 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    
     CGFloat angle = [self angleFromInitialOrientation:_initialInterfaceOrientation];
     
     CGAffineTransform transform;
