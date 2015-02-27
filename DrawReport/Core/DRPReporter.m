@@ -157,6 +157,33 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    BOOL isOS8OrGreater = ([[[UIDevice currentDevice] systemVersion] compare:@"8.0" options:NSNumericSearch] != NSOrderedAscending);
+    if (isOS8OrGreater) {
+        
+        UIImageOrientation imageOrientation;
+        switch (orientation) {
+            case UIInterfaceOrientationUnknown:
+            case UIInterfaceOrientationPortrait:
+                imageOrientation = UIImageOrientationUp;
+                break;
+            
+            case UIInterfaceOrientationLandscapeLeft:
+                imageOrientation = UIImageOrientationLeft;
+                break;
+            
+            case UIInterfaceOrientationLandscapeRight:
+                imageOrientation = UIImageOrientationRight;
+                break;
+            
+            case UIInterfaceOrientationPortraitUpsideDown:
+                imageOrientation = UIImageOrientationDown;
+                break;
+        }
+        
+        image = [UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:imageOrientation];
+    }
+    
     return image;
 }
 
