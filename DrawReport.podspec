@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name     = 'DrawReport'
     s.platform = :ios
-    s.version  = '0.1'
+    s.version  = '0.2'
     s.license  = 'MIT'
     s.summary  = 'Report UI issues by shaking your device to draw and annotate them.'
     s.homepage = 'https://github.com/opedge/DrawReport'
