@@ -56,7 +56,8 @@ static CGFloat const HRPReporterViewControllerNoteViewHeightPercent = 20;
     _imageView.contentMode = UIViewContentModeCenter;    
     
     CGRect drawRect;
-    if (UIInterfaceOrientationIsPortrait(_initialInterfaceOrientation)) {
+    BOOL isOS8OrGreater = ([[[UIDevice currentDevice] systemVersion] compare:@"8.0" options:NSNumericSearch] != NSOrderedAscending);
+    if (UIInterfaceOrientationIsPortrait(_initialInterfaceOrientation) || isOS8OrGreater) {
         drawRect = self.view.bounds;
     } else {
         drawRect = CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.width);
